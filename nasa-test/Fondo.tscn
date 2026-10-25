@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://kj05l476w8nd"]
+
+[ext_resource type="Texture2D" uid="uid://nibf1pcwrqvs" path="res://Assets/maxresdefault.jpg" id="1_gbpp6"]
+[ext_resource type="PackedScene" uid="uid://cmhwkp1u8umnt" path="res://Beto.tscn" id="2_4veg8"]
+[ext_resource type="PackedScene" uid="uid://od2v4pn458wn" path="res://joji.tscn" id="3_qys4x"]
+
+[node name="Fondo" type="Node2D" unique_id=2011510784]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=851334471]
+position = Vector2(607, 357)
+texture = ExtResource("1_gbpp6")
+
+[node name="Beto" parent="." unique_id=1393031788 instance=ExtResource("2_4veg8")]
+position = Vector2(310, 160.00002)
+scale = Vector2(0.1, 0.1)
+
+[node name="Joji" parent="." unique_id=311115063 instance=ExtResource("3_qys4x")]
+position = Vector2(-149, 843)

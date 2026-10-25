@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://od2v4pn458wn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d11lk"]
+load_path = "res://.godot/imported/JOJIHITC.jpg-9a3b86f0fb9fc8563ce1c7e5266c8d1d.ctex"
+
+[sub_resource type="Animation" id="Animation_cqgn1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.150172]
+}
+
+[sub_resource type="Animation" id="Animation_xhrl1"]
+resource_name = "fghj"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.150172, -4.3353977]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8q1sx"]
+_data = {
+&"RESET": SubResource("Animation_cqgn1"),
+&"fghj": SubResource("Animation_xhrl1")
+}
+
+[node name="Joji" type="Node2D" unique_id=311115063]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1166591648]
+position = Vector2(2, -106)
+rotation = -1.150172
+texture = SubResource("CompressedTexture2D_d11lk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1027717615]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=246047480]
+libraries/ = SubResource("AnimationLibrary_8q1sx")

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cmhwkp1u8umnt"]
+
+[ext_resource type="Script" uid="uid://b3wbuvvmv7dc" path="res://beto.gd" id="1_6x77c"]
+[ext_resource type="Texture2D" uid="uid://cikywyrgbskpn" path="res://Assets/FCA380A9-F4A2-4725-ADB8-A3E55C0ED8C2.png" id="1_fbc4x"]
+
+[sub_resource type="Animation" id="Animation_6x77c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.53232545]
+}
+
+[sub_resource type="Animation" id="Animation_q4yb5"]
+resource_name = "caminar"
+length = 9.833333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.16, 6.18, 9.0832),
+"transitions": PackedFloat32Array(1, 0.81225204, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 3.58, 6.53, 9.6364),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.53232545, 0.02617994, 0.47996554, -0.3281219]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qfn2s"]
+_data = {
+&"RESET": SubResource("Animation_6x77c"),
+&"caminar": SubResource("Animation_q4yb5")
+}
+
+[node name="Beto" type="CharacterBody2D" unique_id=1393031788]
+script = ExtResource("1_6x77c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302169234]
+position = Vector2(12, -174)
+rotation = -0.53232545
+texture = ExtResource("1_fbc4x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=34980219]
+libraries/ = SubResource("AnimationLibrary_qfn2s")
