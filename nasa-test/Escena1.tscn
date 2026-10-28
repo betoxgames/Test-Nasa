@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wwdn77n141jf"]
+
+[ext_resource type="Texture2D" uid="uid://xcv1wfbsnym4" path="res://terraria.png" id="1_wurbm"]
+
+[node name="Escena1" type="Node2D" unique_id=1661202339]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=76171005]
+position = Vector2(510, 336)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_wurbm")

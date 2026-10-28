@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ctvvimsixusc6"]
+
+[ext_resource type="Script" uid="uid://neet78tygh7f" path="res://button.gd" id="1_r04n3"]
+[ext_resource type="Texture2D" uid="uid://bc1wsj7k522en" path="res://PBP-V2.png" id="2_n4tde"]
+[ext_resource type="Texture2D" uid="uid://ct0rcqy1syog3" path="res://icon.svg" id="3_vxja4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2pct"]
+atlas = ExtResource("2_n4tde")
+region = Rect2(16, 80.306, 16, 15.563)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6nsn"]
+atlas = ExtResource("2_n4tde")
+region = Rect2(48.17087, 81.73347, 15.870937, 15.62014)
+
+[node name="Button" type="Node2D" unique_id=157417718]
+
+[node name="Control" type="Control" parent="." unique_id=1308273349]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=1944889751]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 61.0
+offset_bottom = 47.0
+text = "button"
+script = ExtResource("1_r04n3")
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=317385669]
+texture_filter = 1
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 15.0
+texture_normal = SubResource("AtlasTexture_m2pct")
+texture_pressed = SubResource("AtlasTexture_l6nsn")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1048280939]
+emitting = false
+texture = ExtResource("3_vxja4")
+one_shot = true

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://6xs0oamxpe6n"]
+
+[ext_resource type="Texture2D" uid="uid://xcv1wfbsnym4" path="res://terraria.png" id="1_ohtkq"]
+[ext_resource type="PackedScene" uid="uid://ctvvimsixusc6" path="res://button.tscn" id="2_bem54"]
+
+[node name="Juego1" type="Node2D" unique_id=2024378875]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1843776085]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ohtkq")
+
+[node name="Button" parent="." unique_id=157417718 instance=ExtResource("2_bem54")]
+position = Vector2(663, 276)
