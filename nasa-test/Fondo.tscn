@@ -15,4 +15,9 @@ position = Vector2(310, 160.00002)
 scale = Vector2(0.1, 0.1)
 
 [node name="Joji" parent="." unique_id=311115063 instance=ExtResource("3_qys4x")]
-position = Vector2(-149, 843)
+position = Vector2(581, 517)
+scale = Vector2(0.3, 0.3)
+
+[node name="Joji2" parent="." unique_id=294330150 instance=ExtResource("3_qys4x")]
+position = Vector2(883.99994, 283)
+scale = Vector2(0.2, 0.2)

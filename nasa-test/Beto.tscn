@@ -65,6 +65,9 @@ _data = {
 &"caminar": SubResource("Animation_q4yb5")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b52nb"]
+size = Vector2(1426.375, 1441.5)
+
 [node name="Beto" type="CharacterBody2D" unique_id=1393031788]
 script = ExtResource("1_6x77c")
 
@@ -75,3 +78,7 @@ texture = ExtResource("1_fbc4x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=34980219]
 libraries/ = SubResource("AnimationLibrary_qfn2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=216556852]
+position = Vector2(12, -125)
+shape = SubResource("RectangleShape2D_b52nb")
